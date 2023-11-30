@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-s">
+    <title>イベント</title>
+</head>
+
+<body>
+    <button id="btn">ハンドラを起動する</button>
+    <script>
+        function showMessage() {
+            alert("ハンドラが起動しました！");
+        }
+        let btn = document.querySelector("button");
+        btn.addEventListener("click", showMessage);
+        element.addEventListener(event, function () {
+            //※ここに処理を書く
+        });
+
+        //例）「ブラウザで発生する主なイベント」から"resize"（サイズが変更する）タイミングで console に文字が発生するようにします。
+        //resizeは、DOM内にはありませんのでwindowで取得します。
+        window.addEventListener("resize", function () {
+            //ここに処理を書きます。
+            console.log("サイズが変わりました。");
+        });
+    </script>
+    <p class="text"><span>色の名前</span>色です。</p>
+
+    <button class="red">赤色</button>
+    <button class="blue">青色</button>
+    <button class="yellow">黄色</button>
+
+    <script>
+        //対象となる要素を取得
+        const text = document.querySelector(".text");
+        const spanText = document.querySelector(".text span");
+        console.dir(text); //オブジェクトの中身を見るのでdirです。
+        text.style.color = "#ff0000";
+        //ボタンの要素を取得
+        const btnRed = document.querySelector(".red");
+        //クリックイベント
+        btnRed.addEventListener("click", function () {
+            text.style.color = "#ff0000";
+        });
+        text.style.color = "#ff0000";
+        spanText.innerText = "赤";
+    </script>
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-s">
+    <title>イベント演習②</title>
+    <style>
+        .redText {
+            color: red;
+        }
+
+        .bigText {
+            font-size: 25px;
+        }
+    </style>
+</head>
+
+<body>
+    <p><span>JavaScript</span>（ジャバスクリプト）とは、プログラミング言語のひとつである。</p>
+    <button class="redder">赤くなる</button>
+    <button class="bigger">大きくなる</button>
+    <script>
+        const text = document.querySelector("p span");
+
+        //赤くなるイベント
+        const btnBtn = document.querySelector(".redder");
+        redBtn.addEventListener("click", function () {
+            text.setAttribute("class", "redText");
+        });
+        //大きくなるイベント
+        const bigBtn = document.querySelector(".bigger");
+        bigBtn.addEventListener("click", function () {
+            text.setAttribute("class", "bigText");
+        });
+    </script>
+</body>
+
+</html>
