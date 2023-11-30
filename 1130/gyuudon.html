@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0" />
+    <title>牛丼</title>
+</head>
+
+<body>
+    <script>
+        //巻数の定義（関数式）
+        const yoshinoya = function (menu, size, topping, price) {
+            console.log(menu + "の" + size + "、" + topping + "で" + price + "円");
+        }
+        //関数の実行
+        yoshinoya("牛丼", "並盛", "つゆだく", 388);//牛丼の並盛、つゆだくで 388円
+        yoshinoya("豚丼", "大盛", "たまご", 592);//豚丼の大盛り、たまごで 592円
+    </script>
+</body>

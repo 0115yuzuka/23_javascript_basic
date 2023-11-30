@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0" />
+    <title>麦わら</title>
+</head>
+
+<body>
+    <div class="fnArea"></div>
+    <script>
+        const member_list = ["チェウォン", "サクラ", "ユンジン", "カズハ", "ウンチェ"];
+        const mugiwara_list = ["モンキー・D・ルフィ", "ナミ", "ロロノア・ゾロ", "ヴィンスモーク・サンジ", "ウソップ", "トニートニー・チョッパー", "ニコ・ロビン", "フランキー", "ブルック", "ジンベエ"];
+
+        const memberArea = document.querySelector(".fnArea");
+
+        //.fnAreaに上記の配列の要素を<li>で追加する関数
+
+        const memberPush = function (members) {
+
+            //memberAreaにul,liで各メンバーを入れる。
+            const ulArea = document.createElement("ul");
+            for (let i = 0; i < member.length; i++) {
+                const list = document.createElement("li");
+                list.textContent = member[i];
+                ulArea.appendChild(list);
+            }
+            document.querySelector(".fnArea").appendChild(ulArea);
+        }
+
+        //関数の実行
+        memberPush(member_list); //LESLAFIMのメンバー
+        memberPush(mugiwara_list); //麦わらの一味
+
+    </script>
+
+</body>
+
+</html>

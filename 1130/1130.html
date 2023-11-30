@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0" />
+</head>
+
+<body>
+    <script>
+        //関数の定義
+        function aisatsu() {
+            console.log("こんにちは");
+        }
+
+        //関数の実行を2回
+        aisatsu();
+        console.log("1回目を実行しました");
+        aisatsu();
+        console.log("2回目を実行しました");
+        //①関数の定義（関数宣言）
+        console.log("私の家の犬の名前は、ポチです。");
+        dogName(); //②関数の実行
+
+        catName(); //①関数の実行
+        function catName() {
+            //②関数の定義（関数宣言）
+            console.log("私の家のネコの名前は、タマです。");
+        }
+
+        function aisatsu(message) {
+            //仮引数
+            //関数の定義
+            console.log(message);
+        }
+        aisatsu("おはよう"); //関数の実行(引数)
+        aisatsu("こんにちは");
+        aisatsu("こんばんは");
+
+
+    </script>
+</body>
+
+</html>

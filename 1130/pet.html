@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0" />
+    <title>演習</title>
+</head>
+
+<body>
+    <ul>
+        <li>犬</li>
+        <li>猫</li>
+    </ul>
+    <p class="result"></p>
+    <script>
+        const dogBtn = document.querySelector("li");
+        const catBtn = document.querySelector("li:nth-child(2)");
+
+        dogBtn.addEventListener("click", function () {
+            console.log("あなたは、○派です。");
+            resultArea.textContent = "あなたは、○派です。";
+        })
+
+        catBtn.addEventListener("click", function () {
+            console.log("あなたは、○派です。");
+            resultArea.textContent = "あなたは、○派です。";
+        })
+
+        console.log(dogBtn, catBtn);
+
+        //関数式
+        console.log("あなたは、○派です。");
+        const animalCheck = function (animal) {
+            resultArea.textContent = "あなたは、○派です。";
+        }
+
+        dogBtn.addEventListener("click", function () {
+            console.dir(this);
+            animalCheck(this, textContent);
+        })
+
+        catBtn.addEventListener("click", function () {
+            console.dir(this);
+            animalCheck(this, textContent);
+        })
+
+    </script>
+</body>
