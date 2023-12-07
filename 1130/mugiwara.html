@@ -17,6 +17,7 @@
 
         //.fnAreaに上記の配列の要素を<li>で追加する関数
 
+
         const memberPush = function (members) {
 
             //memberAreaにul,liで各メンバーを入れる。
@@ -32,6 +33,17 @@
         //関数の実行
         memberPush(member_list); //LESLAFIMのメンバー
         memberPush(mugiwara_list); //麦わらの一味
+
+        const sumCard = function (card) {
+            let total = 0;
+            for (let i = 0; i < card.length; i++) {
+                total += card[i]; //toral = total + card[i]
+            }
+            return total; //ローカル変数
+        };
+        const card_list = [1, 2, 3, 4];
+        const total = sumCard(card_list); //グローバル変数
+        console.log(total); //10
 
     </script>
 
