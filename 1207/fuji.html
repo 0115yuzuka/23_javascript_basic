@@ -53,6 +53,11 @@
             nextBtnClick();
         });
 
+        //2秒で切り替わる
+        const slideShow = function (func) {
+            setInterval(func, 2000);
+        };
+        slideShow(nextBtnClick);
     </script>
 </body>
 
