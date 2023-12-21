@@ -1,0 +1,23 @@
+@charset "UTF-8";
+
+.slide {
+    display: flex;
+    width: 80%;
+    overflow: hidden;
+}
+
+.slide img {
+    width: 100%;
+    min-width: 100%;
+    transition: all 0.5s ease;
+}
+
+.slide img:first-child {
+    margin-left: -100%;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+}
