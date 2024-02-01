@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <style>
+      .modal {
+        transition: all 1s ease-in;
+        opacity: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #eee;
+        border: 1px solid #cdcdcd;
+        padding: 1rem;
+      }
+      .modal.active {
+        opacity: 1;
+      }
+    </style>
+
+    <button id="openModalBtn">Open Modal</button>
+
+    <div class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <p>モーダルウィンドウです。</p>
+      </div>
+    </div>
+    <!-- <div class="counter">
+      <button class="decrease">-</button>
+      <span class="count">0</span>
+      <button class="increase">+</button>
+    </div> -->
+    <!-- <h1>三大栄養素</h1> -->
+    <!-- <ul>
+      <li class="protein">たんぱく質</li>
+      <li class="fats">脂質</li>
+      <li class="carbohydrate">炭水化物</li>
+    </ul> -->
+    <script>
+      // const name = "大谷翔平の";
+      // const number = "背番号は";
+      // const num = "20";
+      // const two = 2;
+      // const seven = 7;
+      // const ending = "です。";
+
+      // //大谷翔平の背番号は17です。
+      // const ohtaniText = document.createElement("p");
+      // ohtaniText.textContent =
+      //   name + number + (two + two + two + two + two + seven) + ending;
+      // document.body.appendChild(ohtaniText);
+
+      // const pinkBlue = [
+      //   "ピンクブルー",
+      //   "Starry Drama",
+      //   "ジブンセイフク",
+      //   "あうん",
+      //   "ミチヲユケ",
+      //   "うそつき",
+      //   "陽はまた昇るから",
+      //   "湿気っている",
+      //   "Don!! White Rabbit ",
+      //   "さもなくば誰がやる",
+      //   "Slow dance",
+      // ];
+      // const michiwoyuke = document.createElement("p");
+      // michiwoyuke.textContent = pinkBlue.find((song) => song === "ミチヲユケ");
+      // document.body.appendChild(michiwoyuke);
+
+      // <li>要素をquerySelectorAllで取得し、for文でループさせる
+      // <li>要素をquerySelectorAllで取得し、for文でループさせる
+      // const nutrientItems = document.querySelectorAll("ul li");
+
+      // for (let i = 0; i < nutrientItems.length; i++) {
+      //   nutrientItems[i].addEventListener("click", () => {
+      //     switch (nutrientItems[i].className) {
+      //       case "protein":
+      //         console.log("たんぱく質");
+      //         break;
+      //       case "fats":
+      //         console.log("脂質");
+      //         break;
+      //       case "carbohydrate":
+      //         console.log("炭水化物");
+      //         break;
+      //     }
+      //   });
+      // }
+
+      // document.addEventListener("DOMContentLoaded", function () {
+      //   const counter = document.querySelector(".counter");
+      //   const decreaseButton = counter.querySelector(".decrease");
+      //   const countElement = counter.querySelector(".count");
+      //   const increaseButton = counter.querySelector(".increase");
+      //   let count = 0;
+      //   decreaseButton.addEventListener("click", function () {
+      //     if (count > 0) {
+      //       count--;
+      //       updateCount();
+      //     }
+      //   });
+      //   increaseButton.addEventListener("click", function () {
+      //     count++;
+      //     updateCount();
+      //   });
+      //   function updateCount() {
+      //     countElement.textContent = count;
+      //   }
+      // });
+
+      document.addEventListener("DOMContentLoaded", function () {
+        const openModalBtn = document.getElementById("openModalBtn");
+        const modal = document.querySelector(".modal");
+        const closeModalBtn = document.querySelector(".close");
+        openModalBtn.addEventListener("click", function () {
+          modal.classList.add("active");
+        });
+        closeModalBtn.addEventListener("click", function () {
+          modal.classList.remove("active");
+        });
+      });
+    </script>
+  </body>
+</html>

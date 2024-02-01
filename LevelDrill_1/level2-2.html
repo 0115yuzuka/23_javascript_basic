@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ja">
   <head>
     <meta charset="UTF-8" />
@@ -30,12 +30,20 @@
       console.log(sausage.textContent);
 
       //ホットケーキをquerySelectorで取得しコンソールで表示
-
+      const hotcake = document.querySelector(".hotcake");
+      console.log(hotcake.textContent);
       //マックグリドルソーセージをquerySelectorで取得しコンソールで表示
-
+      const griddleSausage = document.querySelector(".griddle:first-child");
+      console.log(griddleSausage.textContent);
       //ソーセージエッグマフィンをquerySelectorAll("li")で取得し、コンソールで表示
+      const sausageEggMuffin = document.querySelectorAll(".muffin")[2];
+      console.log(sausageEggMuffin.textContent);
 
       //class="griddle"をquerySelectorAllで取得し、for文で全てをコンソールで表示
+      const griddleItems = document.querySelectorAll(".griddle");
+      for (const griddleItem of griddleItems) {
+        console.log(griddleItem.textContent);
+      }
     </script>
   </body>
 </html>

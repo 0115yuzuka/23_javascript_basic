@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ja">
   <head>
     <meta charset="UTF-8" />
@@ -19,6 +19,11 @@
       const bigBtn = document.querySelector("button");
       const bigText = document.querySelector("span");
       let fontsize = 16;
+
+      bigBtn.addEventListener("click", function () {
+        fontSize += 2;
+        bigText.style.fontSize = `${fontSize}px`;
+      });
     </script>
   </body>
 </html>
