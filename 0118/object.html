@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>object</title>
+</head>
+
+<body>
+    <script>
+        const countries = {
+            Japan: "日本",
+            USA: "アメリカ",
+            China: "中国",
+            Korea: "韓国",
+        };
+
+        for (let key in countries) {
+            console.log(key + ":" + countries[key]);
+        }
+        //日本, アメリカ, 中国, 韓国
+        console.log(countries.USA);//アメリカが欲しい
+        console.log(countries["USA"]);
+
+        //for...in文
+        for (let country in countries) {
+            console.log(countries[country]);
+        }
+
+        //受験者名簿（オブジェクトの配列）
+        const meibo_obj = [
+            { id: "20224", name: "新井太郎" },
+            { id: "20031", name: "井上次郎" },
+            { id: "20193", name: "山本花子" }
+        ];
+
+        for (let i = 0; i < meibo_obj.length; i++) {
+            console.log(meibo_obj[i]);
+        }
+
+        for (let key in meibo_obj[i]) {
+            console.log(meibo_obj[i])
+        }
+        //名簿の0番目の受験者番号と受験者名を出力する
+        console.log(meibo_obj[0]["id"]); //受験者番号
+        console.log(meibo_obj[0]["name"]); //受験者名
+
+        console.log(meibo_obj[0]["id"] + ":" + meibo_obj[0]["name"]);
+        //20224:新井太郎
+
+        let npbCentral_list = [
+            { team: "東京ヤクルトスワローズ", home: "東京" },
+            { team: "阪神タイガース", home: "大阪" },
+            { team: "読売ジャイアンツ", home: "東京" },
+            { team: "広島東洋カープ", home: "広島" },
+            { team: "中日ドラゴンズ", home: "名古屋" },
+            { team: "横浜DeNAベイスターズ", home: "横浜" },
+        ];
+
+        console.log(npbCentral_list[4].home);
+
+        const animals = ["dog", "cat", "bird"];
+        animals[2] = "lion";
+        console.log(animals);
+
+        animals.push("tiger");
+        console.log(animals);
+
+        animals.unshift("elephant");
+        console.log(animals);
+
+        animals.pop();
+        console.log(animals);
+        //["elephant", "dog", "cat", "lion"];
+
+        animals.shift();
+        console.log(animals);
+        //["dog", "cat", "lion"];
+    </script>
+
+    <ul class="junishis"></ul>
+    <script>
+        const junishi = ["丑", "寅", "卯", "辰", "巳", "午", "未", "申", "酉", "戌"];
+        const twopieces = ["子", "亥"];
+        const junishis = document.querySelector(".junishis");
+
+        for (eto of junishi) {
+            const list = document.createElement("li");
+            list.innerHTML = eto;
+            junishis.appendChild(list);
+        }
+    </script>
+
+    <body>
+        <h1>数字を英語で表現する</h1>
+        <table class="table_nam">
+            <tr>
+                <th>数字</th>
+                <th>英語</th>
+            </tr>
+        </table>
+
+        <script>
+            const numbers = ["zero", "one", "two", "three", "four", "five"];
+
+
+        </script>
+    </body>
+</body>
+
+</html>
