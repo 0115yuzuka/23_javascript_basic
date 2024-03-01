@@ -10,5 +10,20 @@
     <p>
       引数として渡した整数の数だけ、<p>HelloJavaScript</p>という文字列をdocument.writeを用いて出力するhellos関数を作りなさい。また、hellos関数を使って、次の実行結果のように3回「HelloJavaScript」という文字列を表示させなさい。なお、ファイル名は「prob5-2.html」とすること。
     </p>
+    <script>
+      function hellos(n){
+        document.body.insertAdjacentHTML("beforeend","<p>");
+          for(let i =0; i<n;i++){
+            document.body.insertAdjacentHTML("beforeend","HelloJavaScript");
+          }
+            document.body.insertAdjacentHTML("beforeend","</p>");
+            return;
+          }
+
+          hellos(1)
+          hellos(1)
+          hellos(1)
+
+    </script>
   </body>
 </html>

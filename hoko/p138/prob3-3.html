@@ -10,7 +10,17 @@
     <p>
       次のサンプルをfor文ではなくwhile文を使ったプログラムに書き換えなさい。
     </p>
+    <h1>繰り返し処理</h1>
+    <script>
+      // for (let num = 1; num <= 5; num++) {
+      //   document.write("<p>" + num + "</p>");
+      // }
 
-    <script></script>
+      let num = 1;
+      while (num <= 5) {
+        document.body.insertAdjacentHTML("beforeEnd", "<p>" + num + "</p>");
+        num++;
+      }
+    </script>
   </body>
 </html>

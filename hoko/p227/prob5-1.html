@@ -17,5 +17,24 @@
       </li>
       <li>minNumber関数を利用して11と16のうち、最小の数を返す処理に変更する</li>
     </ul>
+    <h1>最小値を求める関数</h1>
+    <script>
+      function minNumber(n1, n2) {
+        if (n1 < n2) {
+          return n1;
+        }
+        return n2;
+      }
+
+      const num1 = 11;
+      const num2 = 16;
+
+      const n = minNumber(num1, num2);
+
+      document.body.insertAdjacentHTML(
+        "beforeend",
+        "<p>" + num1 + "と" + num2 + "のうち小さい値は" + n + "です。</p>"
+      );
+    </script>
   </body>
 </html>

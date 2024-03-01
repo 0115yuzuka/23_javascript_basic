@@ -16,4 +16,34 @@
       <li>テーブルで順位、国名、人口の組み合わせの表を作る</li>
     </ul>
   </body>
+
+  <h1>人口が多い国ランキング</h1>
+  <table border="1" style="border-collapse: collapse">
+    <tr>
+      <th>順位</th>
+      <th>国名</th>
+      <th>人口（億人）</th>
+    </tr>
+  </table>
+  <script>
+    const countries = {
+      中国: 14.48,
+      インド: 14.06,
+      インドネシア: 2.79,
+    };
+    const tableElm = document.querySelector("table");
+    let rank = 1;
+    for (let key in countries) {
+      tableElm.insertAdjacentHTML(
+        "beforeend",
+        "<tr><td>" +
+          rank +
+          "</td><td>" +
+          key +
+          "</td><td>" +
+          countries[key] +
+          "</td></tr>"
+      );
+    }
+  </script>
 </html>

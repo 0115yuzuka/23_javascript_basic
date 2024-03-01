@@ -10,5 +10,16 @@
     <p>
       「sample4-14.html」(156ページ)を、document.writeではなくDOMを操作して実現する形に作り変えなさい。この際、DOMツリーに空のulタグを作り追加し、その中にliタグの要素を挿入すること。
     </p>
+    <h1>人気のフルーツ一覧</h1>
+    <ul></ul>
+    <script>
+      const element = document.querySelector("ul");
+      const fruits = ["りんご", "もも", "バナナ"];
+      for (let i = 0; i < fruits.length; i++) {
+        const liLast = document.createElement("li");
+        liLast.textContent = fruits[i];
+        element.appendChild(liLast);
+      }
+    </script>
   </body>
 </html>

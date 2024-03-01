@@ -10,5 +10,35 @@
     <p>
       例題5-2の答え「example5-2.html」(206ページ)を利用して、次の表を作りなさい。なお、ファイル名は「prob5-3.html」とすること。
     </p>
+    <h1>住みたい街ランキング</h1>
+    <table border="1" style="border-collapse: collapse">
+      <tr>
+        <th>順位</th>
+        <th>住みたい街</th>
+        <th>都道府県</th>
+      </tr>
+    </table>
+    <script>
+      const tableElm = document.querySelector("table");
+      const town = [
+        ["1", "横浜市", "神奈川県"],
+        ["2", "札幌市", "北海道"],
+        ["3", "福岡市", "福岡県"],
+        ["4", "名古屋市", "愛知県"],
+        ["5", "世田谷区", "東京都"],
+      ];
+      town.forEach(function (town) {
+        tableElm.insertAdjacentHTML(
+          "beforeend",
+          "<tr><td>" +
+            town[0] +
+            "</td><td>" +
+            town[1] +
+            "</td><td>" +
+            town[2] +
+            "</td></tr>"
+        );
+      });
+    </script>
   </body>
 </html>

@@ -15,5 +15,20 @@
       <li>ランキングの値をリストとして保存する</li>
       <li>番号付きのリストでリストの結果を出力する</li>
     </ul>
+
+    <h1>小学生が将来なりたい職業ランキング</h1>
+    <ol></ol>
+    <script>
+      let rank = [
+        "サッカー選手・監督",
+        "野球選手・監督",
+        "医師",
+        "ユーチューバー",
+      ];
+      const olElm = document.querySelector("ol");
+      for (let i = 0; i < rank.length; i++) {
+        olElm.insertAdjacentHTML("beforeEnd", "<li>" + rank[i] + "</li>");
+      }
+    </script>
   </body>
 </html>

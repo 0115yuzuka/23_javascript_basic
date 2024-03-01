@@ -10,5 +10,49 @@
     <p>
       次のサンプルは、2つの数値の計算(加算・減算)を行うcalcオブジェクトで、aプロパティ、bプロパティの加算と減算を行うプログラムです。このオブジェクトに、乗算、除算を行うメソッドを追加し、その計算結果も出力するようにしなさい。
     </p>
+    <h1>計算オブジェクト</h1>
+    <script>
+      const calc = {
+        a: 0,
+        b: 0,
+
+        add: function () {
+          const ans = this.a + this.b;
+          return ans;
+        },
+        sub: function () {
+          const ans = this.a - this.b;
+          return ans;
+        },
+        mul: function () {
+          const ans = this.a * this.b;
+          return ans;
+        },
+        div: function () {
+          const ans = this.a / this.b;
+          return ans;
+        },
+      };
+      calc.a = 10;
+      calc.b = 5;
+      document.body.insertAdjacentHTML("beforeend", "<p>a=" + calc.a + "</p>");
+      document.body.insertAdjacentHTML("beforeend", "<p>b=" + calc.b + "</p>");
+      document.body.insertAdjacentHTML(
+        "beforeend",
+        "<p>a+b=" + calc.add() + "</p>"
+      );
+      document.body.insertAdjacentHTML(
+        "beforeend",
+        "<p>a-b=" + calc.sub() + "</p>"
+      );
+      document.body.insertAdjacentHTML(
+        "beforeend",
+        "<p>a×b=" + calc.mul() + "</p>"
+      );
+      document.body.insertAdjacentHTML(
+        "beforeend",
+        "<p>a÷b=" + calc.div() + "</p>"
+      );
+    </script>
   </body>
 </html>
